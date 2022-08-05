@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+    background-color: rgb(232, 232, 232);
+}
+
+main p {
+    text-indent: 2em;
+}
+
+h2 {
+    color: rgb(85, 136, 163);
+}
+
+header {
+    display: inline;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+
+/* HEADER */
+.jumbroton {
+    padding: 40px;
+    background-color: rgb(0, 51, 78);
+    text-align: justify;
+    color: white;
+    font-size: 150%;
+    border-bottom: 5px solid rgb(57, 91, 100);
+    align-items: center;
+}
+
+.cont-jum {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigasi {
+    color: white;
+}
+
+.navigasi ul {
+    display: flex;
+    list-style: none;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.navigasi a {
+    text-decoration: none;
+    color: white;
+}
+
+.navigasi a:hover {
+    font-weight: bold;
+    color: rgb(85, 136, 163);
+}
+
+nav {
+    background-color: rgb(165, 201, 202);
+    color: white;
+    padding: 4px;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(16, 111, 163);
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: rgb(38, 55, 106);
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 20px;
+}
+/*==================*/
+
+.container-satu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTAINER DUA*/
+
+.container-dua {
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+}
+
+.cards {
+   
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.cards .header {
+    height: 200px;
+}
+
+.cards img {
+    height: 200px;
+}
+
+.cards .content {
+    padding-bottom: 20px;
+}
+
+.cards .content h4 {
+    text-align: center;
+}
+
+.cards .content p {
+    text-align: justify;
+    padding: 7px;
+}
+/*=============*/
+
+/* ASIDE*/
+aside #img-mdrp {
+        width: 150px;
+        border-radius: 50%;
+        border: 2px solid rgb(85, 136, 163);
+}
+
+aside {
+    text-align: center;
+    float: left;
+    width: 25%;
+    background-color:rgb(193, 212, 237);
+}
+
+aside section {
+    padding-top: 20px;
+}
+
+/*=============*/
+
+#img-mesir {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+#img-kons {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mesir_bio {
+    text-align: center;
+}
+
+table {
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+}
+
+
+figure img {
+    width: 100%;
+}
+
+footer {
+    padding: 20px;
+    background-color: rgb(85, 136, 163);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* HUMBERGER MENU*/
+.list-menu {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.list-menu input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -10px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.list-menu span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.75s;
+}
+/*===============*/
+
+/* HUMBURGER ANIMASI*/
+.list-menu span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.list-menu span:last-child {
+    transform-origin: 0 100%;
+}
+
+.list-menu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, 0);
+}
+
+.list-menu input:checked ~ span:last-child {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.list-menu input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+}
+
+/*========================*/
+
+@media screen and (max-width: 1000px) {
+    aside {
+        width: auto;
+        float: none;
+        padding: 0;
+    }
+    .container-satu {
+        width: 100%;
+    }
+    .container-dua {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards {
+        width: 400px;
+    }
+    .cards img {
+        width: 400px;
+    }
+    .navigasi {
+        z-index: 1;
+    }
+    .navigasi ul {
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        top: -24px;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(0, 51, 78);
+        width: 40%;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+    .list-menu {
+        display: flex;
+        z-index: 2;
+    }
+    .navigasi ul.slide {
+        transform: translateX(0);
+    }
+}
